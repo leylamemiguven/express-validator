@@ -1,0 +1,10 @@
+<h1><%= title %></h1>
+<ul>
+  <% if (users.length > 0) { %>
+    <% users.forEach(function(user) { %>
+      <li>Name: <%= user.firstName %> <%= user.lastName %>, Email: <%= user.email %></li>
+    <% }); %>
+  <% } else { %>
+    <li>No users found matching your search criteria.</li>
+  <% } %>
+</ul>
