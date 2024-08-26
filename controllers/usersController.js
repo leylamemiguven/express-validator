@@ -116,21 +116,18 @@ exports.usersDeletePost = (req, res) => {
 //Searching for users
 
 exports.usersSearchGet = (req, res) => {
-  const { searchName, searchEmail } = req.query;
-  const users = usersStorage.getUsers();
-  let filteredUsers = users;
+  let filteredUsers = usersStorage.getUsers();
 
-  if (searchName) {
-    filteredUsers = filteredUsers.filter(user =>
-      user.firstName.includes(searchName) || user.lastName.includes(searchName)
+  if (req.query) {
+    filteredUsers = filteredUsers.filter(user => {
+      console.log("user here:" , user)
+      return ( user.firstName.toLowerCase().includes(req.query.firstName.toLowerCase()) || user.lastName.toLowerCase().includes(req.query.firstName.toLowerCase())) 
+    }
     );
   }
 
-  if (searchEmail) {
-    filteredUsers = filteredUsers.filter(user =>
-      user.email && user.email.includes(searchEmail)
-    );
-  }
+  //console.log("query here:", req.query.firstName)
+  console.log(filteredUsers)
 
   res.render("search", {
     title: "Search Results",
