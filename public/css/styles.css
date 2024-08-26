@@ -36,6 +36,9 @@ button{
 
 
 }
+button:hover{
+    background: #7FA1FF;
+}
 
 ul{
     list-style: none;
