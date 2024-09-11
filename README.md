@@ -29,13 +29,13 @@ Before you begin, ensure you have the following installed:
    cd express-validator
    ```
 
-2.Install dependencies:
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3.Running the Application
+3. Running the Application
 ```bash
 npm start
 ```
