@@ -74,5 +74,5 @@ A user can be searched by their first name or last name. The results will be sho
 
 
 
-
+Feel free to enhance or customize this project as needed!
 
